@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Goals as a Student</title>
+  <link rel="stylesheet" href="sstyle.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Personal Website</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">ABOUT</a>
+        <div class="dropdown-content">
+          <a href="skills.html">Skills I'm Developing</a>
+          <a href="goals.html">My Goals as a Student</a>
+          <a href="funfacts.html">Fun Facts About Me</a>
+        </div>
+      </li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <a href="#" class="logout-button" onclick="confirmLogout()">LOG OUT</a>
+  </nav>
+
+  <section id="drop">
+    <h2>My Goals as a Student</h2>
+    <p style="text-align: center;">These are my simple goals as I continue learning step by step.</p>
+
+   <div class="goal-grid">
+
+  <div class="goal-card">
+    <div class="goal-header" style="background-color: #6a1b9a;"><strong>What I'm Focusing on Now</strong></div>
+    <p><strong>To understand my lessons better</strong></p>
+    <div class="goal-details">
+      <p>I'm still trying to understand my lessons little by little, especially in IT subjects. My goal is to pass and at least improve in topics I find difficult.</p>
+    </div>
+  </div>
+
+  <div class="goal-card">
+    <div class="goal-header" style="background-color: #0288d1;"><strong>What I Hope for the Future</strong></div>
+    <p>To graduate and improve my skills</p>
+    <div class="goal-details">
+      <p>I want to finish my studies and slowly improve my basic skills in web development. Not in a rush, just learning continuously until I become more confident.</p>
+    </div>
+  </div>
+
+  <div class="goal-card">
+    <div class="goal-header" style="background-color: #ffb300;"><strong>What I'm Improving About Myself</strong></div>
+    <p>To build my confidence and time management</p>
+    <div class="goal-details">
+      <p>I'm still learning how to manage my time and speak with more confidence. I want to be more organized and not easily get shy when presenting.</p>
+    </div>
+  </div>
+
+  <div class="goal-card">
+    <div class="goal-header" style="background-color: #e53935;"><strong>What I Want to Explore</strong></div>
+    <p>To explore what I really want in the future</p>
+    <div class="goal-details">
+      <p>I'm not yet sure about my exact career, but I want to explore different opportunities in IT. I'm willing to learn and try internships to gain small experiences first.</p>
+    </div>
+  </div>
+
+</div>
+  </section>
+
+  <div class="footer-divider"></div>
+
+  <footer>
+    <p>&copy; 2026 Mary Angel Dela Torre. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function confirmLogout() {
+      if (confirm("Are you sure you want to log out?")) {
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = 'login.html';
+      }
+    }
+  </script>
+
+</body>
+</html>

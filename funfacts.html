@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Facts About Me</title>
+  <link rel="stylesheet" href="sstyle.css">
+</head>
+<body>
+
+  <header>
+    <h1>Get to Know Me More</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">ABOUT</a>
+        <div class="dropdown-content">
+          <a href="skills.html">Skills I'm Developing</a>
+          <a href="goals.html">My Goals as a Student</a>
+          <a href="funfacts.html">Fun Facts About Me</a>
+        </div>
+      </li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <a href="#" class="logout-button" onclick="confirmLogout()">LOG OUT</a>
+  </nav>
+
+  <section id="drop">
+    <h2>Fun Facts About Me</h2>
+    <p>A few random things I enjoy doing and learning little by little.</p>
+
+    <div class="funfact-container">
+
+      <div class="funfact-card">
+        <div class="funfact-inner">
+          <div class="funfact-front"><p>Making Portraits!</p></div>
+          <div class="funfact-back"><p>I love making portraits and simple sketches. Still learning, but I enjoy drawing faces in my free time.</p></div>
+        </div>
+      </div>
+
+      <div class="funfact-card">
+        <div class="funfact-inner">
+          <div class="funfact-front"><p>Thai Lover!</p></div>
+          <div class="funfact-back"><p>I'm a big fan of Thai series, music, and culture. I love watching Thai dramas!</p></div>
+        </div>
+      </div>
+
+      <div class="funfact-card">
+        <div class="funfact-inner">
+          <div class="funfact-front"><p>Learning British Accent!</p></div>
+          <div class="funfact-back"><p>I'm trying to learn British accent for fun. I practice by watching British vlogs and movies.</p></div>
+        </div>
+      </div>
+
+      <div class="funfact-card">
+        <div class="funfact-inner">
+          <div class="funfact-front"><p>Broadcasting Voice!</p></div>
+          <div class="funfact-back"><p>I'm learning broadcasting voice for fun. I practice reading news or scripts like a real broadcaster!</p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="footer-divider"></div>
+
+  <footer>
+    <p>&copy; 2026 Mary Angel Dela Torre. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function confirmLogout() {
+      if (confirm("Are you sure you want to log out?")) {
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = 'login.html';
+      }
+    }
+  </script>
+
+</body>
+</html>

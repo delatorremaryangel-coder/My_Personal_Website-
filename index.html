@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Home - Personal Website</title> 
+<link rel="stylesheet" href="sstyle.css">
+<script>
+// ADD LOGIN FIRST - Don't change others
+// This checks if you are logged in before showing home page
+if (localStorage.getItem('isLoggedIn') !== 'true') {
+  window.location.href = 'Login.html';
+}
+</script>
+</head> 
+<body> 
+<header> 
+<h1>Welcome to My Personal Website</h1> 
+</header> 
+<nav> 
+<ul> 
+<li><a href="index.html">HOME</a></li> 
+<li class="dropdown"> 
+<a href="#" class="dropbtn">ABOUT</a> 
+<div class="dropdown-content"> 
+<a href="skills.html">Skills I'm Developing</a> 
+<a href="goals.html">My Goals as a Student</a> 
+<a href="funfacts.html">Fun Facts About Me</a> 
+</div> 
+</li> 
+<li><a href="gallery.html">GALLERY</a></li> 
+<li><a href="contact.html">CONTACT</a></li> 
+<a href="javascript:void(0);" class="logout-button" onclick="confirmLogout()">LOG OUT</a> 
+</ul> 
+</nav> 
+<div class="slider"> 
+<div class="slides"> 
+<div class="slide"> 
+<img src="9.jpg" alt="Image 1"> 
+<div class="text-overlay"><h1>Welcome to my Website!</h1></div> 
+</div> 
+<div class="slide"> 
+<img src="4.jpg" alt="Image 2"> 
+<div class="text-overlay"><h1>Getting to know me more.</h1></div> 
+</div> 
+<div class="slide"> 
+<img src="Thailand.jpg" alt="Image 3"> 
+<div class="text-overlay"><h1>Explore what I really love.</h1></div> 
+</div> 
+</div> 
+</div> 
+<section id="drop"> 
+<h2>My Personal Website</h2> 
+<p>Welcome to my little space on the internet! Come and discover my studies, my projects outside of class, and the things that give me motivation every day.</p> 
+<div class="funfact-container"> 
+<div class="funfact-card"> 
+<div class="funfact-inner"> 
+<div class="funfact-front"><p>Life as a Student!</p></div> 
+<div class="funfact-back"><p>Being an IT student isn't easy, but every lesson, every bug I fix, and every project I finish makes it all worth it!</p></div> 
+</div> 
+</div> 
+<div class="funfact-card"> 
+<div class="funfact-inner"> 
+<div class="funfact-front"><p>The After-Class Hustle!</p></div> 
+<div class="funfact-back"><p>When the programming terminal closes, my sketchpad opens!</p></div> 
+</div> 
+</div> 
+<div class="funfact-card"> 
+<div class="funfact-inner"> 
+<div class="funfact-front"><p>Art + Music Combo!</p></div> 
+<div class="funfact-back"><p>I love drawing portraits while listening to my favorite songs.</p></div> 
+</div> 
+</div> 
+<div class="funfact-card"> 
+<div class="funfact-inner"> 
+<div class="funfact-front"><p>What Inspires Me!</p></div> 
+<div class="funfact-back"><p>My family inspires me the most, and the simple things I love like Thai series and drawing!</p></div> 
+</div> 
+</div> 
+</div> 
+</section> 
+<div class="container"> 
+<div class="image-section"> 
+<img src="Mary.jpg" alt="Mary's Image"> 
+</div> 
+<div class="quote-section"> 
+<h1>Hi, I'm Angel!</h1> 
+<p>An IT student who loves designing cute, interactive websites. I love learning new tech and building projects with heart!</p> 
+<blockquote>"Don't underistemate the power of complaining, it's part of my debbuging strategy."</blockquote> 
+</div> 
+</div> 
+</div> 
+<footer> 
+<p>&copy; 2026 Mary Angel Dela Torre. All rights reserved.</p> 
+</footer> 
+<div class="footer-divider"></div> 
+<script> 
+const slides = document.querySelector('.slides'); 
+let index = 0; 
+function showNextSlide() { 
+if(!slides) return; 
+index = (index + 1) % 3; 
+slides.style.transform = 'translateX(' + (-index * 100) + '%)'; 
+} 
+setInterval(showNextSlide, 3000); 
+function confirmLogout() { 
+if (confirm("Are you sure you want to log out?")) { 
+localStorage.removeItem('isLoggedIn'); 
+window.location.href = 'Login.html'; 
+} 
+} 
+</script> 
+</body> 
+</html>

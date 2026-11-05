@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills I'm Developing</title>
+  <link rel="stylesheet" href="sstyle.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Personal Website</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">ABOUT</a>
+        <div class="dropdown-content">
+          <a href="skills.html">Skills I'm Developing</a>
+          <a href="goals.html">My Goals as a Student</a>
+          <a href="funfacts.html">Fun Facts About Me</a>
+        </div>
+      </li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <a href="#" class="logout-button" onclick="confirmLogout()">LOG OUT</a>
+  </nav>
+
+  <section id="drop">
+    <h2>Skills I'm Developing</h2>
+    <p>I'm still in the learning stage and slowly exploring different skills. I'm not an expert yet, but I'm willing to learn little by little.</p>
+
+    <div id="skills">
+      <!-- TABS -->
+      <div class="tab">
+        <button type="button" class="tablinks" onclick="openTab(event, 'IT')">Information Technology</button>
+        <button type="button" class="tablinks" onclick="openTab(event, 'GraphicDesign')">Graphic Design</button>
+        <button type="button" class="tablinks" onclick="openTab(event, 'PublicSpeaking')">Public Speaking</button>
+        <button type="button" class="tablinks" onclick="openTab(event, 'ProblemSolving')">Problem Solving</button>
+      </div>
+
+      <!-- CONTENT -->
+      <div id="IT" class="tabcontent">
+        <h3>Information Technology</h3>
+        <ul>
+          <li>Currently learning the basics of <strong>HTML and CSS</strong> step by step</li>
+          <li>Trying to understand how to make simple and responsive layouts</li>
+          <li>Still practicing, but willing to learn more about front-end development</li>
+        </ul>
+      </div>
+
+      <div id="GraphicDesign" class="tabcontent">
+        <h3>Graphic Design</h3>
+        <ul>
+          <li>Just exploring simple designs using <strong>Canva</strong></li>
+          <li>Learning basic layout, colors, and fonts slowly</li>
+          <li>Not that skilled yet, but open to learning more about design</li>
+        </ul>
+      </div>
+
+      <div id="PublicSpeaking" class="tabcontent">
+        <h3>Public Speaking</h3>
+        <ul>
+          <li>Still a bit shy, but trying to practice speaking in front of others</li>
+          <li>Learning how to express my thoughts more clearly little by little</li>
+          <li>Willing to join activities that can help me gain more confidence</li>
+        </ul>
+      </div>
+
+      <div id="ProblemSolving" class="tabcontent">
+        <h3>Problem Solving and Critical Thinking</h3>
+        <ul>
+          <li>Still learning how to solve problems on my own, especially in coding</li>
+          <li>Trying to understand errors and find simple solutions step by step</li>
+          <li>Slowly building patience and logical thinking while studying</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-divider"></div>
+
+  <footer>
+    <p>&copy; 2026 Mary Angel Dela Torre. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openTab(evt, tabName) {
+      const tabcontents = document.getElementsByClassName("tabcontent");
+      for (let i = 0; i < tabcontents.length; i++) {
+        tabcontents[i].style.display = "none";
+      }
+      const tablinks = document.getElementsByClassName("tablinks");
+      for (let i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.classList.add("active");
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelector('.tablinks').click();
+    });
+
+    function confirmLogout() {
+      if (confirm("Are you sure you want to log out?")) {
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = 'login.html';
+      }
+    }
+  </script>
+
+</body>
+</html>
